@@ -1,6 +1,6 @@
 # RP2350 + LAN8651 Arduino Compilation Fix
 
-Must place `board.json` files in `boards/` and specify the path to RP2040POE in `platformio.ini` for variants.
+Place `board.json` files in `boards/` and specify the path to RP2040POE in `platformio.ini` for variants.
 
 Replace `PIN_SPIETH_*` in `pins_arduino.h` from variants with `PIN_SPI1_*`. (To use SPI1)
 
@@ -14,6 +14,8 @@ In file included from src/main.ino:3:
    54 | # warning "No pins defined for your board"
       |   ^~~~~~~
 ```
+
+Using [main.ino](src/main.ino) which is based on an example from the [Arduino_10BASE_T1S repository](https://github.com/arduino-libraries/Arduino_10BASE_T1S), PHY currently cannot be initialized. (Serial responded with `'TC6::begin(...)' failed.`)
 
 ## platformio.ini
 
