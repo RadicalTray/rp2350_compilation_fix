@@ -17,7 +17,7 @@ In file included from src/main.ino:3:
 
 ## platformio.ini
 
-Uses [build_flags.py](#build_flags.py) to suppress some errors.
+Uses `build_flags.py` to suppress some errors.
 
 Uses [Arduino_10BASE_T1S Fork](https://github.com/RadicalTray/Arduino_10BASE_T1S) which removes conflicting symbols and defines.
 
@@ -39,7 +39,7 @@ lib_deps =
 	https://github.com/RadicalTray/Arduino_10BASE_T1S
 ```
 
-## [build_flags.py]
+## build_flags.py
 
 Suppresses `.pio/libdeps/rp2350/Arduino_10BASE_T1S/src/lib/liblwip/core/../include/lwip/../../cfg/lwipopts.h:617:19: error: implicit declaration of function 't1s_lwip_itoa'; did you mean 'lwip_itoa'? [-Wimplicit-function-declaration]` error.
 
