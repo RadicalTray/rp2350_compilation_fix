@@ -2,7 +2,7 @@
 
 Must place `board.json` files in `boards/` and specify the path to RP2040POE in `platformio.ini` for variants.
 
-Replace `PIN_SPIETH_*` in `pins_arduino.h` from variants with `PIN_SPI1_*`.
+Replace `PIN_SPIETH_*` in `pins_arduino.h` from variants with `PIN_SPI1_*`. (To use SPI1.)
 
 Current possibly problematic warnings:
 ```
