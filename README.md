@@ -19,7 +19,7 @@ Using [main.ino](src/main.ino) which is based on an example from the [Arduino_10
 
 ## platformio.ini
 
-Uses `build_flags.py` to suppress some errors.
+Uses [build_flags.py](build_flags.py) to suppress some errors.
 
 Uses [Arduino_10BASE_T1S Fork](https://github.com/RadicalTray/Arduino_10BASE_T1S) which removes conflicting symbols and defines.
 
@@ -43,7 +43,10 @@ lib_deps =
 
 ## build_flags.py
 
-Suppresses `.pio/libdeps/rp2350/Arduino_10BASE_T1S/src/lib/liblwip/core/../include/lwip/../../cfg/lwipopts.h:617:19: error: implicit declaration of function 't1s_lwip_itoa'; did you mean 'lwip_itoa'? [-Wimplicit-function-declaration]` error.
+Suppresses this error:
+```
+.pio/libdeps/rp2350/Arduino_10BASE_T1S/src/lib/liblwip/core/../include/lwip/../../cfg/lwipopts.h:617:19: error: implicit declaration of function 't1s_lwip_itoa'; did you mean 'lwip_itoa'? [-Wimplicit-function-declaration]
+```
 
 ```py
 Import("env")
@@ -92,7 +95,7 @@ index ece1125..5003677 100644
   *
 ```
 
-Ignore `cc.h` since symbols from it are already defined by framework-arduinopico.
+Ignore `cc.h` since symbols from it are already defined by framework-arduinopico. Suppresses redefine warnings.
 
 >This patch is not needed to compile and could cause a problem. It is already included by [the Arduino_10BASE_T1S Fork](https://github.com/RadicalTray/Arduino_10BASE_T1S).
 
