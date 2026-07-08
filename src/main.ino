@@ -59,8 +59,8 @@ void setup()
   /* Initialize digital IO interface for interfacing
    * with the LAN8651.
    */
-  pinMode(IRQ_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(IRQ_PIN),
+  pinMode(PIN_SPI1_IRQ, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(PIN_SPI1_IRQ),
                   []() { t1s_io.onInterrupt(); },
                   FALLING);
 
