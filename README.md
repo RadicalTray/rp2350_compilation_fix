@@ -15,7 +15,7 @@ In file included from src/main.ino:3:
       |   ^~~~~~~
 ```
 
-Using [main.ino](src/main.ino) which is based on an example from the [Arduino_10BASE_T1S repository](https://github.com/arduino-libraries/Arduino_10BASE_T1S), PHY currently cannot be initialized. (Serial responded with `'TC6::begin(...)' failed.`)
+Using [main.ino](src/main.ino) which is based on an example from the [Arduino_10BASE_T1S repository](https://github.com/arduino-libraries/Arduino_10BASE_T1S), PHY currently cannot be initialized. (Serial responded with `'TC6::begin(...)' failed.`) (Probably hasn't changed IRQ_PIN to PIN_SPI1_IRQ)
 
 ## platformio.ini
 
