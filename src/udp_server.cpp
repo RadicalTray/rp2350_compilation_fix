@@ -23,7 +23,7 @@ void loopUDPServer(unsigned long now) {
     /* Print some metadata from received UDP packet. */
     Serial.print("[");
     Serial.print(millis());
-    Serial.print("] Received ");
+    Serial.print("] UDP_Server: Received ");
     Serial.print(rx_packet_size);
     Serial.print(" bytes from ");
     Serial.print(udp_server.remoteIP());

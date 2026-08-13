@@ -31,7 +31,7 @@ void loopUDPClient(unsigned long now) {
 
     Serial.print("[");
     Serial.print(millis());
-    Serial.print("] UDP_Client sending: \"");
+    Serial.print("] UDP_Client: Sending \"");
     Serial.print(reinterpret_cast<char *>(udp_tx_msg_buf));
     Serial.println("\"");
 
@@ -44,7 +44,7 @@ void loopUDPClient(unsigned long now) {
     /* Print some metadata from received UDP packet. */
     Serial.print("[");
     Serial.print(millis());
-    Serial.print("] Received ");
+    Serial.print("] UDP_Client: Received ");
     Serial.print(rx_packet_size);
     Serial.print(" bytes from ");
     Serial.print(udp_client.remoteIP());
