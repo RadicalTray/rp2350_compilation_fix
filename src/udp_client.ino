@@ -1,6 +1,6 @@
 #include <Arduino_10BASE_T1S.h>
 
-#include "udp.h"
+#include "udp_client.h"
 
 static IPAddress const UDP_SERVER_IP_ADDR = {192, 168,  42, 100 + 0};
 static uint16_t const UDP_CLIENT_PORT = 8889;
@@ -8,7 +8,7 @@ static uint16_t const UDP_SERVER_PORT = 8888;
 
 Arduino_10BASE_T1S_UDP udp_client;
 
-void initUDP() {
+void initUDPClient() {
   if (!udp_client.begin(UDP_CLIENT_PORT))
   {
     Serial.println("begin(...) failed for UDP client");
@@ -17,7 +17,7 @@ void initUDP() {
   Serial.println("UDP_Client");
 }
 
-void loopUDP() {
+void loopUDPClient() {
   static unsigned long prev_beacon_check = 0;
   static unsigned long prev_udp_packet_sent = 0;
 
