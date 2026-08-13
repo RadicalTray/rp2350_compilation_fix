@@ -2,6 +2,7 @@
 
 #include <Arduino_10BASE_T1S.h>
 #include <SPI.h>
+#include "udp.h"
 
 static uint8_t const T1S_PLCA_NODE_ID = 1;
 
@@ -17,6 +18,7 @@ Arduino_10BASE_T1S_PHY_TC6(SPI, PIN_SPI1_SS, PIN_SPI1_RST, PIN_SPI1_IRQ);
 void setup() {
   initSerial();
   initT1S();
+  initUDP();
 }
 
 void loop() {
@@ -24,6 +26,8 @@ void loop() {
    * Must be called cyclic. The faster the better.
    */
   t1s_phy.service();
+
+  loopUDP();
 }
 
 static void OnPlcaStatus(bool success, bool plcaStatus) {
