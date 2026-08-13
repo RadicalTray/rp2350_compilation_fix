@@ -20,7 +20,7 @@ static uint16_t const UDP_SERVER_PORT = 8888;
  * GLOBAL VARIABLES
  **************************************************************************************/
 
-Arduino_10BASE_T1S_PHY_TC6(SPI1, PIN_SPI1_SS, PIN_SPI1_RST, PIN_SPI1_IRQ);
+Arduino_10BASE_T1S_PHY_TC6(SPI, PIN_SPI1_SS, PIN_SPI1_RST, PIN_SPI1_IRQ);
 Arduino_10BASE_T1S_UDP udp_client;
 
 /**************************************************************************************
@@ -32,31 +32,11 @@ void setup()
   Serial.begin(115200);
   while (!Serial) { }
 
-  Serial.print("spi1 = ");
-  Serial.println(reinterpret_cast<uintptr_t>(spi1), HEX);
-
-  Serial.print("SPI1 = ");
-  Serial.println(reinterpret_cast<uintptr_t>(&SPI1));
-
-  Serial.print("PIN_SPI1_MISO = ");
-  Serial.println(PIN_SPI1_MISO);
-
-  Serial.print("PIN_SPI1_SS = ");
-  Serial.println(PIN_SPI1_SS);
-
-  Serial.print("PIN_SPI1_SCK = ");
-  Serial.println(PIN_SPI1_SCK);
-
-  Serial.print("PIN_SPI1_MOSI = ");
-  Serial.println(PIN_SPI1_MOSI);
-
-  Serial.print("Arduino_10BASE_T1S_PHY_TC6(SPI1, ");
-  Serial.print(PIN_SPI1_SS);
-  Serial.print(" (PIN_SPI1_SS), ");
-  Serial.print(PIN_SPI1_RST);
-  Serial.print(" (PIN_SPI1_RST), ");
-  Serial.print(PIN_SPI1_IRQ);
-  Serial.println(" (PIN_SPI1_IRQ))");
+  // TODO: The difference between old change (pure SPI1) and new change (change SPI0 to use SPI1) is that
+  //  this still uses PIN_SPI0_SS (5u) instead of PIN_SPI1_SS (17u)
+  SPI.setRX(PIN_SPI1_MISO);
+  SPI.setTX(PIN_SPI1_MOSI);
+  SPI.setSCK(PIN_SPI1_SCK);
 
   /* Initialize digital IO interface for interfacing
    * with the LAN8651.
