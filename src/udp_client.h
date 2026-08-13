@@ -1,2 +1,0 @@
-void initUDP();
-void loopUDP();

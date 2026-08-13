@@ -1,16 +1,12 @@
-#include <Arduino_10BASE_T1S.h>
+#include "udp_client.hpp"
 
-#include "udp_client.h"
-
-static IPAddress const UDP_SERVER_IP_ADDR = {192, 168,  42, 100 + 0};
-static uint16_t const UDP_CLIENT_PORT = 8889;
-static uint16_t const UDP_SERVER_PORT = 8888;
+#include "phy.hpp"
+#include "ip.hpp"
 
 Arduino_10BASE_T1S_UDP udp_client;
 
 void initUDPClient() {
-  if (!udp_client.begin(UDP_CLIENT_PORT))
-  {
+  if (!udp_client.begin(UDP_CLIENT_PORT)) {
     Serial.println("begin(...) failed for UDP client");
     for (;;) { }
   }
@@ -23,15 +19,13 @@ void loopUDPClient() {
 
   auto const now = millis();
 
-  if ((now - prev_beacon_check) > 1000)
-  {
+  if ((now - prev_beacon_check) > 1000) {
     prev_beacon_check = now;
     if (!t1s_phy.getPlcaStatus(OnPlcaStatus))
       Serial.println("getPlcaStatus(...) failed");
   }
 
-  if ((now - prev_udp_packet_sent) > 1000)
-  {
+  if ((now - prev_udp_packet_sent) > 1000) {
     static int tx_packet_cnt = 0;
 
     prev_udp_packet_sent = now;
@@ -56,8 +50,7 @@ void loopUDPClient() {
 
   /* Check for incoming UDP packets. */
   int const rx_packet_size = udp_client.parsePacket();
-  if (rx_packet_size)
-  {
+  if (rx_packet_size) {
     /* Print some metadata from received UDP packet. */
     Serial.print("[");
     Serial.print(millis());
@@ -73,8 +66,7 @@ void loopUDPClient() {
     size_t const UDP_RX_MSG_BUF_SIZE = 16 + 1; /* Reserve the last byte for the '\0' termination. */
     uint8_t udp_rx_msg_buf[UDP_RX_MSG_BUF_SIZE] = {0};
     int bytes_read = udp_client.read(udp_rx_msg_buf, UDP_RX_MSG_BUF_SIZE - 1);
-    while(bytes_read != 0)
-    {
+    while(bytes_read != 0) {
       /* Print received data to Serial. */
       udp_rx_msg_buf[bytes_read] = '\0'; /* Terminate buffer so that we can print it as a C-string. */
       Serial.print(reinterpret_cast<char *>(udp_rx_msg_buf));
