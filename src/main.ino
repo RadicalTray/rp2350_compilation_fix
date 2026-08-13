@@ -31,10 +31,12 @@ void setup()
 {
   Serial.begin(115200);
   while (!Serial) { }
-  delay(1000);
 
-  Serial.print("(long long unsigned int)spi1 = ");
-  Serial.println((long long unsigned int)spi1, HEX);
+  Serial.print("spi1 = ");
+  Serial.println(reinterpret_cast<uintptr_t>(spi1), HEX);
+
+  Serial.print("SPI1 = ");
+  Serial.println(reinterpret_cast<uintptr_t>(&SPI1));
 
   Serial.print("PIN_SPI1_MISO = ");
   Serial.println(PIN_SPI1_MISO);
@@ -59,11 +61,13 @@ void setup()
   /* Initialize digital IO interface for interfacing
    * with the LAN8651.
    */
+  Serial.println("Attach interrupt");
   pinMode(PIN_SPI1_IRQ, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(PIN_SPI1_IRQ),
                   []() { t1s_io.onInterrupt(); },
                   FALLING);
 
+  Serial.println("Begin T1S_IO");
   /* Initialize IO module. */
   if (!t1s_io.begin())
   {
@@ -73,6 +77,7 @@ void setup()
 
   MacAddress const mac_addr = MacAddress::create_from_uid();
 
+  Serial.println("Begin T1S_PHY");
   if (!t1s_phy.begin(ip_addr
     , network_mask
     , gateway

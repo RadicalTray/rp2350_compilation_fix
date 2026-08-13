@@ -1,0 +1,714 @@
+(long long unsigned int)spi1 = 40088000
+
+PIN_SPI1_MISO = 16
+
+PIN_SPI1_SS = 17
+
+PIN_SPI1_SCK = 18
+
+PIN_SPI1_MOSI = 19
+
+Arduino_10BASE_T1S_PHY_TC6(SPI1, 17 (PIN_SPI1_SS), 15 (PIN_SPI1_RST), 14 (PIN_SPI1_IRQ))
+
+Initialize the TC6 library and pass a global tag.
+
+Initialize TC6 registers.
+
+pReg = 536882976
+
+pReg == NULL 0
+
+--- DoInitialization() ---
+
+pReg->initialized = true;
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 0
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 1
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 0
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 2
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 1
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 3
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 2
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 4
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 3
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 5
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 4
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 6
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 5
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 7
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 6
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 8
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 7
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 9
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 8
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = B
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = 9
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = C
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = B
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = D
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = C
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 1
+
+addr = 3
+
+value = 1
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- accessRegisters() ---
+
+op = 1
+
+addr = 3
+
+value = 1
+
+secure = 1
+
+modifyMask = 0
+
+payloadSize = 16
+
+success = 1
+
+-------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = 1
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = A0094
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 0
+
+success = 0
+
+-------------------------
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+--- PrintShit() ---
+
+success = 1
+
+addr = D
+
+value (HEX) = 0
+
+value (BIN) = 0
+
+-------------------
+
+------------------------
+
+--- accessRegisters() ---
+
+op = 2
+
+addr = A0094
+
+value = 0
+
+secure = 0
+
+modifyMask = 0
+
+payloadSize = 12
+
+success = 1
+
+-------------------------
+
+Wait until Chip Revision is reported back
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+OnSoftResetCB()
+
+success = 1
+
+addr = 3
+
+value = 0
+
+------------------------
+
+Wait until Chip Revision is reported back
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+OnSoftResetCB()
+
+success = 0
+
+addr = 3
+
+value = FFFFFFFF
+
+------------------------
+
+Wait until Chip Revision is reported back
+
+--- serviceControl() ---
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+rx_buf: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Calling callback
+
+OnReadId1()
+
+success = 1
+
+addr = 1
+
+value = 0
+
+oui = 0
+
+model = 0
+
+PRINT(...) => [31mUnsupported hardware[0m
+
+
+
+OnReadId1() failed
+
+------------------------
+
+DoInitialization() calling HandlePlca()
+
+--------------------------
+
+'TC6::begin(...)' failed.
+
