@@ -14,6 +14,6 @@ T1SMacSettings  const t1s_default_mac_settings;
 IPAddress const LO_IP_ADDR = {127,   0,   0,   1};
 
 // UDP
-IPAddress const UDP_SERVER_IP_ADDR = LO_IP_ADDR;
+IPAddress const UDP_SERVER_IP_ADDR = ip_addr;
 uint16_t  const UDP_CLIENT_PORT    = 8889;
 uint16_t  const UDP_SERVER_PORT    = 8888;

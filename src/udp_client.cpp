@@ -1,6 +1,5 @@
 #include "udp_client.hpp"
 
-#include "phy.hpp"
 #include "ip.hpp"
 
 Arduino_10BASE_T1S_UDP udp_client;
@@ -13,17 +12,8 @@ void initUDPClient() {
   Serial.println("UDP_Client");
 }
 
-void loopUDPClient() {
-  static unsigned long prev_beacon_check = 0;
+void loopUDPClient(unsigned long now) {
   static unsigned long prev_udp_packet_sent = 0;
-
-  auto const now = millis();
-
-  if ((now - prev_beacon_check) > 1000) {
-    prev_beacon_check = now;
-    if (!t1s_phy.getPlcaStatus(OnPlcaStatus))
-      Serial.println("getPlcaStatus(...) failed");
-  }
 
   if ((now - prev_udp_packet_sent) > 1000) {
     static int tx_packet_cnt = 0;
@@ -66,7 +56,7 @@ void loopUDPClient() {
     size_t const UDP_RX_MSG_BUF_SIZE = 16 + 1; /* Reserve the last byte for the '\0' termination. */
     uint8_t udp_rx_msg_buf[UDP_RX_MSG_BUF_SIZE] = {0};
     int bytes_read = udp_client.read(udp_rx_msg_buf, UDP_RX_MSG_BUF_SIZE - 1);
-    while(bytes_read != 0) {
+    while (bytes_read != 0) {
       /* Print received data to Serial. */
       udp_rx_msg_buf[bytes_read] = '\0'; /* Terminate buffer so that we can print it as a C-string. */
       Serial.print(reinterpret_cast<char *>(udp_rx_msg_buf));

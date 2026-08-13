@@ -5,4 +5,4 @@
 extern Arduino_10BASE_T1S_UDP udp_client;
 
 void initUDPClient();
-void loopUDPClient();
+void loopUDPClient(unsigned long now);

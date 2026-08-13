@@ -6,7 +6,7 @@
 // Declares t1s_io and t1s_phy
 Arduino_10BASE_T1S_PHY_TC6(SPI, PIN_SPI1_SS, PIN_SPI1_RST, PIN_SPI1_IRQ);
 
-void OnPlcaStatus(bool success, bool plcaStatus) {
+static void OnPlcaStatus(bool success, bool plcaStatus) {
   if (!success) {
     Serial.println("PLCA status register read failed");
     return;
@@ -58,4 +58,16 @@ void initPhy() {
   Serial.println(mac_addr);
   Serial.println(t1s_plca_settings);
   Serial.println(t1s_default_mac_settings);
+}
+
+void loopPhy(unsigned long now) {
+  static unsigned long prev_beacon_check = 0;
+
+  t1s_phy.service();
+
+  if ((now - prev_beacon_check) > 1000) {
+    prev_beacon_check = now;
+    if (!t1s_phy.getPlcaStatus(OnPlcaStatus))
+      Serial.println("getPlcaStatus(...) failed");
+  }
 }

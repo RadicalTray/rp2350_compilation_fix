@@ -5,4 +5,4 @@
 extern Arduino_10BASE_T1S_UDP udp_server;
 
 void initUDPServer();
-void loopUDPServer();
+void loopUDPServer(unsigned long now);

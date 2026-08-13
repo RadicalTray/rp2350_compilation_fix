@@ -1,6 +1,5 @@
 #include "udp_server.hpp"
 
-#include "phy.hpp"
 #include "ip.hpp"
 
 Arduino_10BASE_T1S_UDP udp_server;
@@ -13,17 +12,7 @@ void initUDPServer() {
   Serial.println("UDP_Server");
 }
 
-void loopUDPServer() {
-  static unsigned long prev_beacon_check = 0;
-
-  auto const now = millis();
-
-  if ((now - prev_beacon_check) > 1000) {
-    prev_beacon_check = now;
-    if (!t1s_phy.getPlcaStatus(OnPlcaStatus))
-      Serial.println("getPlcaStatus(...) failed");
-  }
-
+void loopUDPServer(unsigned long now) {
   /* Check for incoming UDP packets. */
   int const rx_packet_size = udp_server.parsePacket();
   if (rx_packet_size) {
@@ -46,7 +35,7 @@ void loopUDPServer() {
     size_t const UDP_RX_MSG_BUF_SIZE = 16 + 1; /* Reserve the last byte for the '\0' termination. */
     uint8_t udp_rx_msg_buf[UDP_RX_MSG_BUF_SIZE] = {0};
     int bytes_read = udp_server.read(udp_rx_msg_buf, UDP_RX_MSG_BUF_SIZE - 1);
-    while(bytes_read != 0) {
+    while (bytes_read != 0) {
       /* Copy received data into transmit buffer for echo functionality. */
       std::copy(udp_rx_msg_buf, udp_rx_msg_buf + bytes_read, std::back_inserter(udp_tx_buf));
 

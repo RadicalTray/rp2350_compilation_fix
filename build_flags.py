@@ -2,7 +2,7 @@ Import("env")
 
 # Both C and C++
 env.Append(CCFLAGS=[
-    "-DLWIP_HAVE_LOOPIF=1", # enable loopback
+    "-DLWIP_NETIF_LOOPBACK=1", # enable loopback
 ])
 
 # C
