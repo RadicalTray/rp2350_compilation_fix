@@ -4,8 +4,9 @@
 
 Arduino_10BASE_T1S_UDP udp_server;
 
-void initUDPServer() {
-  if (!udp_server.begin(UDP_SERVER_PORT)) {
+// NOTE: Arduino_10BASE_T1S_UDP uses IP_ADDR_ANY (0.0.0.0) for the ip address
+void initUDPServer(uint16_t port) {
+  if (!udp_server.begin(port)) {
     Serial.println("begin(...) failed for UDP server");
     for (;;) { }
   }

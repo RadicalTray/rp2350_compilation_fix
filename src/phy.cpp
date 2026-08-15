@@ -42,22 +42,22 @@ void initPhy() {
   MacAddress const mac_addr = MacAddress::create_from_uid();
 
   if (!t1s_phy.begin(
-    ip_addr,
-    network_mask,
-    gateway,
+    PHY_IP_ADDR,
+    PHY_NETWORK_MASK,
+    PHY_GATEWAY,
     mac_addr,
-    t1s_plca_settings,
-    t1s_default_mac_settings
+    PHY_T1S_PLCA_SETTINGS,
+    PHY_T1S_DEFAULT_MAC_SETTINGS
   )) {
     Serial.println("'TC6::begin(...)' failed.");
     for (;;) { }
   }
 
   Serial.print("IP\t");
-  Serial.println(ip_addr);
+  Serial.println(PHY_IP_ADDR);
   Serial.println(mac_addr);
-  Serial.println(t1s_plca_settings);
-  Serial.println(t1s_default_mac_settings);
+  Serial.println(PHY_T1S_PLCA_SETTINGS);
+  Serial.println(PHY_T1S_DEFAULT_MAC_SETTINGS);
 }
 
 void loopPhy(unsigned long now) {

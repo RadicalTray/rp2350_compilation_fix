@@ -4,15 +4,15 @@
 
 Arduino_10BASE_T1S_UDP udp_client;
 
-void initUDPClient() {
-  if (!udp_client.begin(UDP_CLIENT_PORT)) {
+void initUDPClient(uint16_t port) {
+  if (!udp_client.begin(port)) {
     Serial.println("begin(...) failed for UDP client");
     for (;;) { }
   }
   Serial.println("UDP_Client");
 }
 
-void loopUDPClient(unsigned long now) {
+void loopUDPClient(unsigned long now, IPAddress server_ip, uint16_t server_port) {
   static unsigned long prev_udp_packet_sent = 0;
 
   if ((now - prev_udp_packet_sent) > 1000) {
@@ -25,7 +25,7 @@ void loopUDPClient(unsigned long now) {
     int const tx_packet_size = snprintf((char *)udp_tx_msg_buf, sizeof(udp_tx_msg_buf), "Single-Pair Ethernet / 10BASE-T1S: packet cnt = %d", tx_packet_cnt);
 
     /* Send a UDP packet to the UDP server. */
-    udp_client.beginPacket(UDP_SERVER_IP_ADDR, UDP_SERVER_PORT);
+    udp_client.beginPacket(server_ip, server_port);
     udp_client.write(udp_tx_msg_buf, tx_packet_size);
     udp_client.endPacket();
 
