@@ -8,12 +8,26 @@ void setup() {
   Serial.begin(115200);
   while (!Serial) { }
 
-  Serial.print("ENABLE_LOOPBACK = "); Serial.println(ENABLE_LOOPBACK);
-  Serial.print("LWIP_NETIF_LOOPBACK = "); Serial.println(LWIP_NETIF_LOOPBACK);
-
   initPhy();
   initUDPServer();
   initUDPClient();
+
+  int i = 0;
+  struct netif *netif;
+  NETIF_FOREACH(netif) {
+    i += 1;
+    Serial.print("netif ");
+    Serial.print(i);
+    Serial.print(": ");
+    Serial.print(ip4_addr1(&netif->ip_addr));
+    Serial.print(".");
+    Serial.print(ip4_addr2(&netif->ip_addr));
+    Serial.print(".");
+    Serial.print(ip4_addr3(&netif->ip_addr));
+    Serial.print(".");
+    Serial.print(ip4_addr4(&netif->ip_addr));
+    Serial.println("");
+  }
 }
 
 void loop() {
