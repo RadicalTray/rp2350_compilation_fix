@@ -9,7 +9,6 @@ uint16_t const UDP_SERVER_PORT = 8888;
 uint16_t const UDP_CLIENT_PORT = 8889;
 
 // TODO:
-//  - try loopback (127.0.0.1) for udp server
 //  - try tcp
 void setup() {
   Serial.begin(115200);
@@ -38,9 +37,16 @@ void setup() {
 }
 
 // Server can only receive from only one IP for some reason.
-// Buffer full, weird LWIP behaviour I don't know about?
+// A full buffer (PHY / Arduino_10BASE_T1S_UDP), some weird LWIP behaviour I don't know about?
 //
-// TODO: make a separate UDP Client, in case the buffer in Arduino_10BASE_T1S_UDP's full.
+//  From Arduino_10BASE_T1S_UDP:
+//  /* Discard UdpRxPacket object previously held by _rx_pkt
+//   * and replace it with the new one.
+//   */
+//
+// TODO:
+//  -   LIKELY: service the server before sending another packet so the server doesn't discard it
+//  - UNLIKELY: make a separate UDP Client, in case the buffer in Arduino_10BASE_T1S_UDP's full.
 void loop() {
   auto const now = millis();
 
