@@ -36,39 +36,30 @@ void setup() {
   }
 }
 
-// Server can only receive from only one IP for some reason.
-// A full buffer (PHY / Arduino_10BASE_T1S_UDP), some weird LWIP behaviour I don't know about?
-//
-//  From Arduino_10BASE_T1S_UDP:
-//  /* Discard UdpRxPacket object previously held by _rx_pkt
-//   * and replace it with the new one.
-//   */
-//
-// TODO:
-//  -   LIKELY: service the server before sending another packet so the server doesn't discard it
-//  - UNLIKELY: make a separate UDP Client, in case the buffer in Arduino_10BASE_T1S_UDP's full.
 void loop() {
+  static unsigned long prev = 0;
+  static IPAddress server_ip = LO_IP_ADDR;
+
   auto const now = millis();
+
+  if (now - prev > 10000) {
+    prev = now;
+
+    // switch ip to test
+    if (server_ip == LO_IP_ADDR)
+      server_ip = PHY_IP_ADDR;
+    else
+      server_ip = LO_IP_ADDR;
+  }
 
   loopPhy(now);
 
-  // clear output queue
+  // clear lwip's output queue
   // required since loopback packets are handled by lwip which puts outputs onto a queue
   netif_poll_all();
 
   loopUDPServer(now);
-  Serial.println("Trying Loopback IP");
-  loopUDPClient(now, LO_IP_ADDR, UDP_SERVER_PORT);
-
-  {
-    loopPhy(now);
-    netif_poll_all();
-
-    loopUDPServer(now);
-    Serial.println("Trying Loopback IP");
-    loopUDPClient(now, PHY_IP_ADDR, UDP_SERVER_PORT);
-  }
-
-  // Don't print too much
-  delay(1000);
+  loopUDPClient(now, server_ip, UDP_SERVER_PORT);
+  // can't immediately do another loopUDPClient() because it waits 1 second before sending
+  // another packet; the second call won't do anything.
 }

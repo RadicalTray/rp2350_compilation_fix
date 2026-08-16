@@ -31,7 +31,9 @@ void loopUDPClient(unsigned long now, IPAddress server_ip, uint16_t server_port)
 
     Serial.print("[");
     Serial.print(millis());
-    Serial.print("] UDP_Client: Sending \"");
+    Serial.print("] UDP_Client: Sending to ");
+    Serial.print(server_ip);
+    Serial.print(": \"");
     Serial.print(reinterpret_cast<char *>(udp_tx_msg_buf));
     Serial.println("\"");
 
