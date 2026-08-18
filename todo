@@ -1,2 +1,4 @@
-Handle connection failures in the html page, something like 5 fails -> show fail page and stop fetching
+- Handle connection failures in the html page, something like 5 fails -> show fail page and stop fetching
 (use javascript to swap page cuz no connection to http server, only ur browser page exists)
+
+- Python script before build to pre-generate the html page (extra_scripts = pre:script.py)
