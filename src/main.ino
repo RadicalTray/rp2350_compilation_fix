@@ -6,6 +6,8 @@
 #include <WebSocketsServer.h>
 
 // try deleting this (remove netif_poll_all() cuz ugly)
+//
+// what if this makes platformio use framework-arduinopico's lwip, hmmm??? :think:
 #include <lwip/netdb.h>
 
 #define USE_SERIAL Serial
