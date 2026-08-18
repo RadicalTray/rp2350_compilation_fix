@@ -1,1 +1,2 @@
-Test loopback ip (127.0.0.1)/Try creating another interface if that doesn't work?
+Handle connection failures in the html page, something like 5 fails -> show fail page and stop fetching
+(use javascript to swap page cuz no connection to http server, only ur browser page exists)

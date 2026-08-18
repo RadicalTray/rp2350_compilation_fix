@@ -7,6 +7,8 @@
 #include <Arduino.h>
 #include "http_server.hpp"
 
+int http_led = 0;
+
 enum http_state {
   HS_NONE = 0,
   HS_ACCEPTED,
@@ -94,10 +96,12 @@ http_send_cstr(struct tcp_pcb *tpcb, struct http_conn *hs, const char *s)
 /* ── routes ──────────────────────────────────────────────────────── */
 
 static const char PAGE_HTML[] =
+
 "HTTP/1.1 200 OK\r\n"
 "Content-Type: text/html\r\n"
 "Connection: close\r\n"
 "\r\n"
+
 "<!DOCTYPE html><html><head>"
 "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
 "<title>10BASE-T1S</title>"
@@ -266,6 +270,8 @@ http_dispatch(struct tcp_pcb *tpcb, struct http_conn *hs)
 
   /* ── POST /api/counter ── */
   if (strcmp(method, "POST") == 0 && strcmp(path, "/api/counter") == 0) {
+    http_led = 1;
+
     char resp[128];
     int len = snprintf(resp, sizeof(resp),
       "HTTP/1.1 200 OK\r\n"
