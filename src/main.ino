@@ -1,5 +1,6 @@
 #include "phy.hpp"
 #include "ip.hpp"
+#include "tcp.hpp"
 
 #include <lwip/netdb.h>
 
@@ -8,6 +9,8 @@ void setup() {
   while (!Serial) { }
 
   initPhy();
+
+  tcpecho_raw_init(7);
 
   int i = 0;
   struct netif *netif;
