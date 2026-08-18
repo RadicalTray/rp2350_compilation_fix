@@ -1,0 +1,1534 @@
+IP      192.168.42.100
+
+MAC     A8:61:0A:00:00:00
+
+PLCA
+        node id     : 0 (PLCA Coordinator)
+        node count  : 8
+        burst count : 0
+        burst timer : 128
+
+MAC
+        promisc. mode : 0
+        tx cut through: 0
+        rx cut through: 0
+
+netif 1: 192.168.42.100
+
+netif 2: 127.0.0.1
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+[0] Connected from 192.168.42.1 url: /
+[0] get Text: Connect Tue Aug 18 2026 16:02:24 GMT+0700 (Indochina Time)
+PLCA Mode active
+
+PLCA Mode active
+
+[0] get Text: #778080
+Red: 119
+[0] get Text: #738080
+Red: 115
+[0] get Text: #708080
+Red: 112
+[0] get Text: #6c8080
+Red: 108
+[0] get Text: #6a8080
+Red: 106
+[0] get Text: #698080
+Red: 105
+[0] get Text: #688080
+Red: 104
+[0] get Text: #678080
+Red: 103
+[0] get Text: #658080
+Red: 101
+[0] get Text: #638080
+Red: 99
+[0] get Text: #628080
+Red: 98
+[0] get Text: #608080
+Red: 96
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #5d8080
+Red: 93
+[0] get Text: #5c8080
+Red: 92
+[0] get Text: #5a8080
+Red: 90
+[0] get Text: #578080
+Red: 87
+[0] get Text: #568080
+Red: 86
+[0] get Text: #558080
+Red: 85
+[0] get Text: #538080
+Red: 83
+[0] get Text: #528080
+Red: 82
+[0] get Text: #4e8080
+Red: 78
+[0] get Text: #4d8080
+Red: 77
+[0] get Text: #4c8080
+Red: 76
+[0] get Text: #4a8080
+Red: 74
+[0] get Text: #498080
+Red: 73
+[0] get Text: #488080
+Red: 72
+[0] get Text: #458080
+Red: 69
+[0] get Text: #448080
+Red: 68
+[0] get Text: #438080
+Red: 67
+[0] get Text: #428080
+Red: 66
+[0] get Text: #418080
+Red: 65
+[0] get Text: #408080
+Red: 64
+[0] get Text: #3f8080
+Red: 63
+[0] get Text: #3e8080
+Red: 62
+[0] get Text: #3d8080
+Red: 61
+[0] get Text: #3c8080
+Red: 60
+[0] get Text: #3b8080
+Red: 59
+[0] get Text: #3a8080
+Red: 58
+[0] get Text: #388080
+Red: 56
+[0] get Text: #378080
+Red: 55
+[0] get Text: #358080
+Red: 53
+[0] get Text: #348080
+Red: 52
+[0] get Text: #338080
+Red: 51
+[0] get Text: #328080
+Red: 50
+[0] get Text: #318080
+Red: 49
+[0] get Text: #308080
+Red: 48
+[0] get Text: #2f8080
+Red: 47
+[0] get Text: #2e8080
+Red: 46
+[0] get Text: #2d8080
+Red: 45
+[0] get Text: #2c8080
+Red: 44
+[0] get Text: #2b8080
+Red: 43
+PLCA Mode active
+
+[0] get Text: #2c8080
+Red: 44
+[0] get Text: #318080
+Red: 49
+[0] get Text: #378080
+Red: 55
+[0] get Text: #478080
+Red: 71
+[0] get Text: #538080
+Red: 83
+[0] get Text: #5e8080
+Red: 94
+[0] get Text: #6c8080
+Red: 108
+[0] get Text: #828080
+Red: 130
+[0] get Text: #8b8080
+Red: 139
+[0] get Text: #958080
+Red: 149
+[0] get Text: #a48080
+Red: 164
+[0] get Text: #aa8080
+Red: 170
+[0] get Text: #b68080
+Red: 182
+[0] get Text: #bb8080
+Red: 187
+[0] get Text: #bf8080
+Red: 191
+[0] get Text: #c58080
+Red: 197
+[0] get Text: #c88080
+Red: 200
+[0] get Text: #cb8080
+Red: 203
+[0] get Text: #cf8080
+Red: 207
+[0] get Text: #d18080
+Red: 209
+[0] get Text: #d48080
+Red: 212
+[0] get Text: #d68080
+Red: 214
+[0] get Text: #d78080
+Red: 215
+[0] get Text: #d98080
+Red: 217
+[0] get Text: #da8080
+Red: 218
+[0] get Text: #dd8080
+Red: 221
+[0] get Text: #df8080
+Red: 223
+[0] get Text: #e18080
+Red: 225
+[0] get Text: #e38080
+Red: 227
+[0] get Text: #e48080
+Red: 228
+[0] get Text: #e58080
+Red: 229
+[0] get Text: #e78080
+Red: 231
+[0] get Text: #e88080
+Red: 232
+[0] get Text: #e98080
+Red: 233
+[0] get Text: #eb8080
+Red: 235
+[0] get Text: #ec8080
+Red: 236
+[0] get Text: #eb8080
+Red: 235
+[0] get Text: #ea8080
+Red: 234
+[0] get Text: #e98080
+Red: 233
+[0] get Text: #e18080
+Red: 225
+[0] get Text: #db8080
+Red: 219
+[0] get Text: #d68080
+Red: 214
+[0] get Text: #cc8080
+Red: 204
+[0] get Text: #c78080
+Red: 199
+[0] get Text: #bf8080
+Red: 191
+[0] get Text: #bc8080
+Red: 188
+[0] get Text: #b98080
+Red: 185
+[0] get Text: #b48080
+Red: 180
+[0] get Text: #b18080
+Red: 177
+[0] get Text: #b08080
+Red: 176
+[0] get Text: #ac8080
+Red: 172
+[0] get Text: #a98080
+Red: 169
+[0] get Text: #a78080
+Red: 167
+[0] get Text: #a58080
+Red: 165
+[0] get Text: #a38080
+Red: 163
+[0] get Text: #a08080
+Red: 160
+[0] get Text: #9c8080
+Red: 156
+[0] get Text: #9b8080
+Red: 155
+[0] get Text: #988080
+Red: 152
+[0] get Text: #968080
+Red: 150
+[0] get Text: #928080
+Red: 146
+[0] get Text: #908080
+Red: 144
+[0] get Text: #8f8080
+Red: 143
+[0] get Text: #8c8080
+Red: 140
+[0] get Text: #8b8080
+Red: 139
+[0] get Text: #8a8080
+Red: 138
+[0] get Text: #888080
+Red: 136
+[0] get Text: #878080
+Red: 135
+[0] get Text: #858080
+Red: 133
+[0] get Text: #848080
+Red: 132
+[0] get Text: #838080
+Red: 131
+[0] get Text: #828080
+Red: 130
+[0] get Text: #818080
+Red: 129
+[0] get Text: #808080
+Red: 128
+[0] get Text: #7f8080
+Red: 127
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #7c8080
+Red: 124
+[0] get Text: #7a8080
+Red: 122
+[0] get Text: #798080
+Red: 121
+[0] get Text: #758080
+Red: 117
+[0] get Text: #738080
+Red: 115
+[0] get Text: #718080
+Red: 113
+[0] get Text: #6f8080
+Red: 111
+[0] get Text: #6e8080
+Red: 110
+[0] get Text: #6b8080
+Red: 107
+[0] get Text: #668080
+Red: 102
+[0] get Text: #638080
+Red: 99
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #568080
+Red: 86
+[0] get Text: #528080
+Red: 82
+[0] get Text: #498080
+Red: 73
+[0] get Text: #448080
+Red: 68
+[0] get Text: #408080
+Red: 64
+[0] get Text: #3a8080
+Red: 58
+PLCA Mode active
+
+[0] get Text: #368080
+Red: 54
+[0] get Text: #318080
+Red: 49
+[0] get Text: #2f8080
+Red: 47
+[0] get Text: #2e8080
+Red: 46
+[0] get Text: #2a8080
+Red: 42
+[0] get Text: #298080
+Red: 41
+[0] get Text: #288080
+Red: 40
+[0] get Text: #268080
+Red: 38
+[0] get Text: #258080
+Red: 37
+[0] get Text: #248080
+Red: 36
+[0] get Text: #228080
+Red: 34
+[0] get Text: #208080
+Red: 32
+[0] get Text: #1f8080
+Red: 31
+[0] get Text: #1e8080
+Red: 30
+[0] get Text: #1d8080
+Red: 29
+[0] get Text: #1c8080
+Red: 28
+[0] get Text: #1d8080
+Red: 29
+[0] get Text: #1e8080
+Red: 30
+[0] get Text: #1f8080
+Red: 31
+[0] get Text: #208080
+Red: 32
+[0] get Text: #218080
+Red: 33
+[0] get Text: #228080
+Red: 34
+[0] get Text: #238080
+Red: 35
+[0] get Text: #258080
+Red: 37
+[0] get Text: #268080
+Red: 38
+[0] get Text: #298080
+Red: 41
+[0] get Text: #368080
+Red: 54
+[0] get Text: #3b8080
+Red: 59
+[0] get Text: #438080
+Red: 67
+[0] get Text: #4e8080
+Red: 78
+[0] get Text: #548080
+Red: 84
+[0] get Text: #598080
+Red: 89
+[0] get Text: #618080
+Red: 97
+[0] get Text: #648080
+Red: 100
+[0] get Text: #678080
+Red: 103
+[0] get Text: #6c8080
+Red: 108
+[0] get Text: #6e8080
+Red: 110
+[0] get Text: #728080
+Red: 114
+[0] get Text: #738080
+Red: 115
+[0] get Text: #748080
+Red: 116
+[0] get Text: #768080
+Red: 118
+[0] get Text: #778080
+Red: 119
+[0] get Text: #788080
+Red: 120
+[0] get Text: #798080
+Red: 121
+[0] get Text: #7a8080
+Red: 122
+[0] get Text: #7b8080
+Red: 123
+[0] get Text: #7c8080
+Red: 124
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #7e8080
+Red: 126
+[0] get Text: #7f8080
+Red: 127
+[0] get Text: #7e8080
+Red: 126
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #7c8080
+Red: 124
+[0] get Text: #798080
+Red: 121
+[0] get Text: #778080
+Red: 119
+[0] get Text: #768080
+Red: 118
+[0] get Text: #758080
+Red: 117
+[0] get Text: #748080
+Red: 116
+[0] get Text: #728080
+Red: 114
+PLCA Mode active
+
+[0] get Text: #708080
+Red: 112
+[0] get Text: #6e8080
+Red: 110
+[0] get Text: #6d8080
+Red: 109
+[0] get Text: #6c8080
+Red: 108
+[0] get Text: #698080
+Red: 105
+[0] get Text: #688080
+Red: 104
+[0] get Text: #668080
+Red: 102
+[0] get Text: #658080
+Red: 101
+[0] get Text: #648080
+Red: 100
+[0] get Text: #618080
+Red: 97
+[0] get Text: #608080
+Red: 96
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #5e8080
+Red: 94
+[0] get Text: #5d8080
+Red: 93
+[0] get Text: #5b8080
+Red: 91
+[0] get Text: #5a8080
+Red: 90
+[0] get Text: #598080
+Red: 89
+[0] get Text: #588080
+Red: 88
+[0] get Text: #578080
+Red: 87
+[0] get Text: #568080
+Red: 86
+[0] get Text: #578080
+Red: 87
+[0] get Text: #5a8080
+Red: 90
+[0] get Text: #5d8080
+Red: 93
+[0] get Text: #658080
+Red: 101
+[0] get Text: #678080
+Red: 103
+[0] get Text: #6b8080
+Red: 107
+[0] get Text: #6f8080
+Red: 111
+[0] get Text: #728080
+Red: 114
+[0] get Text: #738080
+Red: 115
+[0] get Text: #758080
+Red: 117
+[0] get Text: #778080
+Red: 119
+[0] get Text: #798080
+Red: 121
+[0] get Text: #7a8080
+Red: 122
+[0] get Text: #7b8080
+Red: 123
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #7f8080
+Red: 127
+[0] get Text: #808080
+Red: 128
+[0] get Text: #818080
+Red: 129
+[0] get Text: #828080
+Red: 130
+[0] get Text: #838080
+Red: 131
+[0] get Text: #848080
+Red: 132
+[0] get Text: #838080
+Red: 131
+[0] get Text: #818080
+Red: 129
+[0] get Text: #808080
+Red: 128
+PLCA Mode active
+
+[0] get Text: #7f8080
+Red: 127
+[0] get Text: #788080
+Red: 120
+[0] get Text: #728080
+Red: 114
+[0] get Text: #6e8080
+Red: 110
+[0] get Text: #658080
+Red: 101
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #588080
+Red: 88
+[0] get Text: #548080
+Red: 84
+[0] get Text: #518080
+Red: 81
+[0] get Text: #4d8080
+Red: 77
+[0] get Text: #4c8080
+Red: 76
+[0] get Text: #4b8080
+Red: 75
+[0] get Text: #478080
+Red: 71
+[0] get Text: #468080
+Red: 70
+[0] get Text: #458080
+Red: 69
+[0] get Text: #448080
+Red: 68
+[0] get Text: #438080
+Red: 67
+[0] get Text: #428080
+Red: 66
+[0] get Text: #418080
+Red: 65
+[0] get Text: #408080
+Red: 64
+[0] get Text: #448080
+Red: 68
+[0] get Text: #498080
+Red: 73
+[0] get Text: #4e8080
+Red: 78
+[0] get Text: #5a8080
+Red: 90
+[0] get Text: #5e8080
+Red: 94
+[0] get Text: #628080
+Red: 98
+[0] get Text: #698080
+Red: 105
+[0] get Text: #6d8080
+Red: 109
+[0] get Text: #728080
+Red: 114
+[0] get Text: #738080
+Red: 115
+[0] get Text: #768080
+Red: 118
+[0] get Text: #788080
+Red: 120
+[0] get Text: #7a8080
+Red: 122
+[0] get Text: #7b8080
+Red: 123
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #7e8080
+Red: 126
+[0] get Text: #7f8080
+Red: 127
+[0] get Text: #808080
+Red: 128
+[0] get Text: #818080
+Red: 129
+[0] get Text: #828080
+Red: 130
+[0] get Text: #838080
+Red: 131
+[0] get Text: #848080
+Red: 132
+[0] get Text: #858080
+Red: 133
+[0] get Text: #888080
+Red: 136
+[0] get Text: #8c8080
+Red: 140
+[0] get Text: #8e8080
+Red: 142
+[0] get Text: #948080
+Red: 148
+[0] get Text: #988080
+Red: 152
+[0] get Text: #9d8080
+Red: 157
+[0] get Text: #a08080
+Red: 160
+[0] get Text: #a18080
+Red: 161
+[0] get Text: #a58080
+Red: 165
+[0] get Text: #a88080
+Red: 168
+[0] get Text: #a98080
+Red: 169
+PLCA Mode active
+
+[0] get Text: #ab8080
+Red: 171
+[0] get Text: #ac8080
+Red: 172
+[0] get Text: #ae8080
+Red: 174
+[0] get Text: #b18080
+Red: 177
+[0] get Text: #b28080
+Red: 178
+[0] get Text: #b58080
+Red: 181
+[0] get Text: #b78080
+Red: 183
+[0] get Text: #b98080
+Red: 185
+[0] get Text: #be8080
+Red: 190
+[0] get Text: #c08080
+Red: 192
+[0] get Text: #c38080
+Red: 195
+[0] get Text: #c98080
+Red: 201
+[0] get Text: #cc8080
+Red: 204
+[0] get Text: #cf8080
+Red: 207
+[0] get Text: #d58080
+Red: 213
+[0] get Text: #d88080
+Red: 216
+[0] get Text: #e08080
+Red: 224
+[0] get Text: #e38080
+Red: 227
+[0] get Text: #e58080
+Red: 229
+[0] get Text: #ec8080
+Red: 236
+[0] get Text: #ef8080
+Red: 239
+[0] get Text: #f38080
+Red: 243
+[0] get Text: #fa8080
+Red: 250
+[0] get Text: #fd8080
+Red: 253
+[0] get Text: #ff8080
+Red: 255
+[0] get Text: #f28080
+Red: 242
+[0] get Text: #ec8080
+Red: 236
+[0] get Text: #e68080
+Red: 230
+[0] get Text: #d98080
+Red: 217
+[0] get Text: #d38080
+Red: 211
+[0] get Text: #ce8080
+Red: 206
+[0] get Text: #c78080
+Red: 199
+[0] get Text: #c28080
+Red: 194
+[0] get Text: #be8080
+Red: 190
+[0] get Text: #bc8080
+Red: 188
+[0] get Text: #b88080
+Red: 184
+[0] get Text: #b68080
+Red: 182
+[0] get Text: #b48080
+Red: 180
+[0] get Text: #b38080
+Red: 179
+[0] get Text: #af8080
+Red: 175
+[0] get Text: #ad8080
+Red: 173
+[0] get Text: #ac8080
+Red: 172
+[0] get Text: #aa8080
+Red: 170
+[0] get Text: #a88080
+Red: 168
+[0] get Text: #a28080
+Red: 162
+[0] get Text: #9e8080
+Red: 158
+[0] get Text: #9b8080
+Red: 155
+[0] get Text: #928080
+Red: 146
+[0] get Text: #8e8080
+Red: 142
+[0] get Text: #888080
+Red: 136
+[0] get Text: #848080
+Red: 132
+[0] get Text: #818080
+Red: 129
+[0] get Text: #7c8080
+Red: 124
+[0] get Text: #7b8080
+Red: 123
+[0] get Text: #798080
+Red: 121
+[0] get Text: #778080
+Red: 119
+[0] get Text: #768080
+Red: 118
+[0] get Text: #748080
+Red: 116
+[0] get Text: #728080
+Red: 114
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+[0] get Text: #6e8080
+Red: 110
+[0] get Text: #7a8080
+Red: 122
+PLCA Mode active
+
+[0] get Text: #958080
+Red: 149
+[0] get Text: #968080
+Red: 150
+[0] get Text: #978080
+Red: 151
+[0] get Text: #988080
+Red: 152
+[0] get Text: #998080
+Red: 153
+[0] get Text: #9b8080
+Red: 155
+[0] get Text: #9c8080
+Red: 156
+PLCA Mode active
+
+[0] get Text: #9d8080
+Red: 157
+PLCA Mode active
+
+
+PLCA Mode active
+
+PLCA Mode active
+
+[0] get Text: #a28080
+Red: 162
+[0] get Text: #a18080
+Red: 161
+[0] get Text: #998080
+Red: 153
+PLCA Mode active
+
+PLCA Mode active
+
+[0] get Text: #898080
+Red: 137
+[0] get Text: #888080
+Red: 136
+[0] get Text: #868080
+Red: 134
+[0] get Text: #848080
+Red: 132
+PLCA Mode active
+
+[0] get Text: #938080
+Red: 147
+[0] get Text: #8f8080
+Red: 143
+[0] get Text: #8e8080
+Red: 142
+[0] get Text: #8c8080
+Red: 140
+[0] get Text: #5d8080
+Red: 93
+PLCA Mode active
+
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #608080
+Red: 96
+[0] get Text: #648080
+Red: 100
+[0] get Text: #678080
+Red: 103
+PLCA Mode active
+
+[0] get Text: #768080
+Red: 118
+[0] get Text: #798080
+Red: 121
+PLCA Mode active
+
+[0] get Text: #838080
+Red: 131
+PLCA Mode active
+
+[0] get Text: #878080
+Red: 135
+[0] get Text: #808080
+Red: 128
+[0] get Text: #338080
+Red: 51
+PLCA Mode active
+
+[0] get Text: #9b8080
+Red: 155
+[0] get Text: #fa8080
+Red: 250
+PLCA Mode active
+
+[0] get Text: #448080
+Red: 68
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+PLCA Mode active
+
+[0] get Text: #508080
+Red: 80
+[0] get Text: #538080
+Red: 83
+[0] get Text: #568080
+Red: 86
+PLCA Mode active
+
+[0] get Text: #508080
+Red: 80
+[0] get Text: #568080
+Red: 86
+PLCA Mode active
+
+[0] get Text: #8d8080
+Red: 141
+PLCA Mode active
+
+[0] get Text: #8e8080
+Red: 142
+[0] get Text: #918080
+Red: 145
+[0] get Text: #938080
+Red: 147
+[0] get Text: #958080
+Red: 149
+[0] get Text: #9a8080
+Red: 154
+[0] get Text: #9c8080
+Red: 156
+[0] get Text: #a28080
+Red: 162
+[0] get Text: #a38080
+Red: 163
+[0] get Text: #a68080
+Red: 166
+[0] get Text: #aa8080
+Red: 170
+[0] get Text: #ac8080
+Red: 172
+[0] get Text: #ad8080
+Red: 173
+[0] get Text: #af8080
+Red: 175
+[0] get Text: #b08080
+Red: 176
+[0] get Text: #b18080
+Red: 177
+[0] get Text: #b28080
+Red: 178
+[0] get Text: #b38080
+Red: 179
+[0] get Text: #b48080
+Red: 180
+[0] get Text: #b68080
+Red: 182
+[0] get Text: #b78080
+Red: 183
+[0] get Text: #b88080
+Red: 184
+[0] get Text: #bb8080
+Red: 187
+[0] get Text: #bc8080
+Red: 188
+[0] get Text: #bd8080
+Red: 189
+[0] get Text: #be8080
+Red: 190
+[0] get Text: #bd8080
+Red: 189
+[0] get Text: #b18080
+Red: 177
+[0] get Text: #a98080
+Red: 169
+[0] get Text: #998080
+Red: 153
+[0] get Text: #8f8080
+Red: 143
+[0] get Text: #868080
+Red: 134
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #6a8080
+Red: 106
+[0] get Text: #618080
+Red: 97
+[0] get Text: #508080
+Red: 80
+[0] get Text: #4a8080
+Red: 74
+[0] get Text: #3f8080
+Red: 63
+[0] get Text: #3c8080
+Red: 60
+[0] get Text: #388080
+Red: 56
+[0] get Text: #318080
+Red: 49
+[0] get Text: #308080
+Red: 48
+[0] get Text: #2f8080
+Red: 47
+[0] get Text: #2d8080
+Red: 45
+[0] get Text: #2c8080
+Red: 44
+[0] get Text: #2a8080
+Red: 42
+[0] get Text: #298080
+Red: 41
+[0] get Text: #2a8080
+Red: 42
+[0] get Text: #2d8080
+Red: 45
+[0] get Text: #2f8080
+Red: 47
+[0] get Text: #308080
+Red: 48
+[0] get Text: #348080
+Red: 52
+[0] get Text: #368080
+Red: 54
+[0] get Text: #398080
+Red: 57
+[0] get Text: #3c8080
+Red: 60
+[0] get Text: #3f8080
+Red: 63
+PLCA Mode active
+
+[0] get Text: #448080
+Red: 68
+[0] get Text: #468080
+Red: 70
+[0] get Text: #498080
+Red: 73
+[0] get Text: #4d8080
+Red: 77
+[0] get Text: #4e8080
+Red: 78
+[0] get Text: #538080
+Red: 83
+[0] get Text: #558080
+Red: 85
+[0] get Text: #578080
+Red: 87
+[0] get Text: #5b8080
+Red: 91
+[0] get Text: #5d8080
+Red: 93
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #638080
+Red: 99
+[0] get Text: #658080
+Red: 101
+[0] get Text: #698080
+Red: 105
+[0] get Text: #6b8080
+Red: 107
+[0] get Text: #6d8080
+Red: 109
+[0] get Text: #708080
+Red: 112
+[0] get Text: #728080
+Red: 114
+[0] get Text: #748080
+Red: 116
+[0] get Text: #798080
+Red: 121
+[0] get Text: #7b8080
+Red: 123
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #7f8080
+Red: 127
+[0] get Text: #818080
+Red: 129
+[0] get Text: #848080
+Red: 132
+[0] get Text: #858080
+Red: 133
+[0] get Text: #888080
+Red: 136
+[0] get Text: #8b8080
+Red: 139
+[0] get Text: #8c8080
+Red: 140
+[0] get Text: #8e8080
+Red: 142
+[0] get Text: #918080
+Red: 145
+[0] get Text: #938080
+Red: 147
+[0] get Text: #968080
+Red: 150
+[0] get Text: #988080
+Red: 152
+[0] get Text: #998080
+Red: 153
+[0] get Text: #9a8080
+Red: 154
+[0] get Text: #9d8080
+Red: 157
+[0] get Text: #9e8080
+Red: 158
+[0] get Text: #a18080
+Red: 161
+[0] get Text: #a28080
+Red: 162
+[0] get Text: #a38080
+Red: 163
+[0] get Text: #a58080
+Red: 165
+[0] get Text: #a68080
+Red: 166
+[0] get Text: #a88080
+Red: 168
+[0] get Text: #a98080
+Red: 169
+[0] get Text: #aa8080
+Red: 170
+[0] get Text: #ac8080
+Red: 172
+[0] get Text: #ad8080
+Red: 173
+[0] get Text: #ae8080
+Red: 174
+[0] get Text: #af8080
+Red: 175
+[0] get Text: #b08080
+Red: 176
+[0] get Text: #b18080
+Red: 177
+[0] get Text: #b28080
+Red: 178
+[0] get Text: #b38080
+Red: 179
+[0] get Text: #b58080
+Red: 181
+[0] get Text: #b68080
+Red: 182
+[0] get Text: #b78080
+Red: 183
+[0] get Text: #b88080
+Red: 184
+[0] get Text: #bb8080
+Red: 187
+[0] get Text: #bc8080
+Red: 188
+[0] get Text: #bd8080
+Red: 189
+[0] get Text: #c18080
+Red: 193
+[0] get Text: #c38080
+Red: 195
+[0] get Text: #c58080
+Red: 197
+[0] get Text: #c68080
+Red: 198
+[0] get Text: #c88080
+Red: 200
+[0] get Text: #cc8080
+Red: 204
+[0] get Text: #cd8080
+Red: 205
+[0] get Text: #ce8080
+Red: 206
+[0] get Text: #cf8080
+Red: 207
+[0] get Text: #d08080
+Red: 208
+[0] get Text: #d18080
+Red: 209
+[0] get Text: #d28080
+Red: 210
+[0] get Text: #d38080
+Red: 211
+[0] get Text: #d48080
+Red: 212
+[0] get Text: #d58080
+Red: 213
+[0] get Text: #d48080
+Red: 212
+[0] get Text: #cf8080
+Red: 207
+[0] get Text: #c38080
+Red: 195
+[0] get Text: #ba8080
+Red: 186
+[0] get Text: #b38080
+Red: 179
+[0] get Text: #9f8080
+Red: 159
+[0] get Text: #958080
+Red: 149
+[0] get Text: #898080
+Red: 137
+[0] get Text: #758080
+Red: 117
+[0] get Text: #6b8080
+Red: 107
+[0] get Text: #5b8080
+Red: 91
+[0] get Text: #538080
+Red: 83
+[0] get Text: #4e8080
+Red: 78
+PLCA Mode active
+
+[0] get Text: #448080
+Red: 68
+[0] get Text: #3f8080
+Red: 63
+[0] get Text: #3b8080
+Red: 59
+[0] get Text: #358080
+Red: 53
+[0] get Text: #328080
+Red: 50
+[0] get Text: #2e8080
+Red: 46
+[0] get Text: #2c8080
+Red: 44
+[0] get Text: #2b8080
+Red: 43
+[0] get Text: #298080
+Red: 41
+[0] get Text: #288080
+Red: 40
+[0] get Text: #278080
+Red: 39
+[0] get Text: #268080
+Red: 38
+[0] get Text: #288080
+Red: 40
+[0] get Text: #2a8080
+Red: 42
+[0] get Text: #2e8080
+Red: 46
+[0] get Text: #328080
+Red: 50
+[0] get Text: #3a8080
+Red: 58
+[0] get Text: #4b8080
+Red: 75
+[0] get Text: #538080
+Red: 83
+[0] get Text: #5d8080
+Red: 93
+[0] get Text: #6f8080
+Red: 111
+[0] get Text: #778080
+Red: 119
+[0] get Text: #838080
+Red: 131
+[0] get Text: #878080
+Red: 135
+[0] get Text: #8a8080
+Red: 138
+[0] get Text: #908080
+Red: 144
+[0] get Text: #928080
+Red: 146
+[0] get Text: #948080
+Red: 148
+[0] get Text: #978080
+Red: 151
+[0] get Text: #988080
+Red: 152
+[0] get Text: #9b8080
+Red: 155
+[0] get Text: #9c8080
+Red: 156
+[0] get Text: #9d8080
+Red: 157
+[0] get Text: #9e8080
+Red: 158
+[0] get Text: #9f8080
+Red: 159
+[0] get Text: #a08080
+Red: 160
+[0] get Text: #a18080
+Red: 161
+[0] get Text: #a28080
+Red: 162
+[0] get Text: #a48080
+Red: 164
+[0] get Text: #a58080
+Red: 165
+[0] get Text: #a68080
+Red: 166
+[0] get Text: #a78080
+Red: 167
+[0] get Text: #aa8080
+Red: 170
+[0] get Text: #ab8080
+Red: 171
+[0] get Text: #ad8080
+Red: 173
+[0] get Text: #b18080
+Red: 177
+[0] get Text: #b38080
+Red: 179
+[0] get Text: #b48080
+Red: 180
+[0] get Text: #b88080
+Red: 184
+[0] get Text: #ba8080
+Red: 186
+[0] get Text: #bb8080
+Red: 187
+[0] get Text: #be8080
+Red: 190
+[0] get Text: #c08080
+Red: 192
+[0] get Text: #c38080
+Red: 195
+[0] get Text: #c58080
+Red: 197
+[0] get Text: #c78080
+Red: 199
+[0] get Text: #c98080
+Red: 201
+[0] get Text: #ca8080
+Red: 202
+[0] get Text: #cb8080
+Red: 203
+[0] get Text: #ce8080
+Red: 206
+[0] get Text: #cf8080
+Red: 207
+[0] get Text: #d08080
+Red: 208
+[0] get Text: #ce8080
+Red: 206
+[0] get Text: #c78080
+Red: 199
+[0] get Text: #c68080
+Red: 198
+[0] get Text: #c08080
+Red: 192
+[0] get Text: #b48080
+Red: 180
+[0] get Text: #a88080
+Red: 168
+[0] get Text: #9d8080
+Red: 157
+[0] get Text: #898080
+Red: 137
+[0] get Text: #7d8080
+Red: 125
+[0] get Text: #678080
+Red: 103
+[0] get Text: #5f8080
+Red: 95
+[0] get Text: #568080
+Red: 86
+[0] get Text: #4b8080
+Red: 75
+[0] get Text: #468080
+Red: 70
+PLCA Mode active
+
+[0] get Text: #438080
+Red: 67
+[0] get Text: #3e8080
+Red: 62
+[0] get Text: #3c8080
+Red: 60
+[0] get Text: #3a8080
+Red: 58
+[0] get Text: #378080
+Red: 55
+[0] get Text: #358080
+Red: 53

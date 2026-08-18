@@ -3,36 +3,62 @@
 #include "http_server.hpp"
 
 #include <WebServer.h>
+#include <WebSocketsServer.h>
 
+// try deleting this (remove netif_poll_all() cuz ugly)
 #include <lwip/netdb.h>
+
+#define USE_SERIAL Serial
 
 uint16_t led = 20;
 uint8_t led_state = LOW;
 unsigned long last_led = 0;
 
 WebServer server(80);
+WebSocketsServer webSocket = WebSocketsServer(81);
 
-void handleRoot() {
-  digitalWrite(led, 1);
-  server.send(200, "text/plain", "hello from pico w!\r\n");
-  digitalWrite(led, 0);
-}
+void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length) {
+  switch(type) {
+    case WStype_DISCONNECTED:
+      {
+        USE_SERIAL.printf("[%u] Disconnected!\n", num);
+        break;
+      }
+    case WStype_CONNECTED:
+      {
+        IPAddress ip = webSocket.remoteIP(num);
+        USE_SERIAL.printf("[%u] Connected from %d.%d.%d.%d url: %s\n", num, ip[0], ip[1], ip[2], ip[3], payload);
 
-void handleNotFound() {
-  digitalWrite(led, 1);
-  String message = "File Not Found\n\n";
-  message += "URI: ";
-  message += server.uri();
-  message += "\nMethod: ";
-  message += (server.method() == HTTP_GET) ? "GET" : "POST";
-  message += "\nArguments: ";
-  message += server.args();
-  message += "\n";
-  for (int i = 0; i < server.args(); i++) {
-    message += " " + server.argName(i) + ": " + server.arg(i) + "\n";
+        // send message to client
+        webSocket.sendTXT(num, "Connected");
+        break;
+      }
+    case WStype_TEXT:
+      {
+        USE_SERIAL.printf("[%u] get Text: %s\n", num, payload);
+
+        if(payload[0] == '#') {
+          // we get RGB data
+
+          uint32_t rgb = (uint32_t) strtol((const char *) &payload[1], NULL, 16);
+          uint32_t red = (rgb >> 16) & 0xFF;
+          USE_SERIAL.printf("Red: %d\n", red);
+          if (red > 125) {
+            digitalWrite(led, HIGH);
+          } else {
+            digitalWrite(led, LOW);
+          }
+
+          // decode rgb data
+          //
+          // analogWrite(LED_RED,    ((rgb >> 16) & 0xFF));
+          // analogWrite(LED_GREEN,  ((rgb >> 8) & 0xFF));
+          // analogWrite(LED_BLUE,   ((rgb >> 0) & 0xFF));
+        }
+
+        break;
+      }
   }
-  server.send(404, "text/plain", message);
-  digitalWrite(led, 0);
 }
 
 void setup() {
@@ -63,86 +89,15 @@ void setup() {
     Serial.println("");
   }
 
-  server.on("/", handleRoot);
+  webSocket.begin();
+  webSocket.onEvent(webSocketEvent);
 
-  server.on("/inline", []() {
-    server.send(200, "text/plain", "this works as well");
-  });
-
-  server.on("/gif", []() {
-    static const uint8_t gif[] = {
-      0x47, 0x49, 0x46, 0x38, 0x37, 0x61, 0x10, 0x00, 0x10, 0x00, 0x80, 0x01,
-      0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0x2c, 0x00, 0x00, 0x00, 0x00,
-      0x10, 0x00, 0x10, 0x00, 0x00, 0x02, 0x19, 0x8c, 0x8f, 0xa9, 0xcb, 0x9d,
-      0x00, 0x5f, 0x74, 0xb4, 0x56, 0xb0, 0xb0, 0xd2, 0xf2, 0x35, 0x1e, 0x4c,
-      0x0c, 0x24, 0x5a, 0xe6, 0x89, 0xa6, 0x4d, 0x01, 0x00, 0x3b
-    };
-    char gif_colored[sizeof(gif)];
-    memcpy_P(gif_colored, gif, sizeof(gif));
-    // Set the background to a random set of colors
-    gif_colored[16] = millis() % 256;
-    gif_colored[17] = millis() % 256;
-    gif_colored[18] = millis() % 256;
-    server.send(200, "image/gif", gif_colored, sizeof(gif_colored));
-  });
-
-  server.onNotFound(handleNotFound);
-
-  /////////////////////////////////////////////////////////
-  // Hook examples
-
-  server.addHook([](const String & method, const String & url, WiFiClient * client, WebServer::ContentTypeFunction contentType) {
-    (void)method;       // GET, PUT, ...
-    (void)url;          // example: /root/myfile.html
-    (void)client;       // the webserver tcp client connection
-    (void)contentType;  // contentType(".html") => "text/html"
-    Serial.printf("A useless web hook has passed\n");
-    return WebServer::CLIENT_REQUEST_CAN_CONTINUE;
-  });
-
-  server.addHook([](const String&, const String & url, WiFiClient*, WebServer::ContentTypeFunction) {
-    if (url.startsWith("/fail")) {
-      Serial.printf("An always failing web hook has been triggered\n");
-      return WebServer::CLIENT_MUST_STOP;
-    }
-    return WebServer::CLIENT_REQUEST_CAN_CONTINUE;
-  });
-
-  server.addHook([](const String&, const String & url, WiFiClient * client, WebServer::ContentTypeFunction) {
-    if (url.startsWith("/dump")) {
-      Serial.printf("The dumper web hook is on the run\n");
-
-      // Here the request is not interpreted, so we cannot for sure
-      // swallow the exact amount matching the full request+content,
-      // hence the tcp connection cannot be handled anymore by the
-      auto last = millis();
-      while ((millis() - last) < 500) {
-        char buf[32];
-        size_t len = client->read((uint8_t*)buf, sizeof(buf));
-        if (len > 0) {
-          Serial.printf("(<%d> chars)", (int)len);
-          Serial.write(buf, len);
-          last = millis();
-        }
-      }
-      // Two choices: return MUST STOP and webserver will close it
-      //                       (we already have the example with '/fail' hook)
-      // or                  IS GIVEN and webserver will forget it
-      // trying with IS GIVEN and storing it on a dumb WiFiClient.
-      // check the client connection: it should not immediately be closed
-      // (make another '/dump' one to close the first)
-      Serial.printf("\nTelling server to forget this connection\n");
-      static WiFiClient forgetme = *client;  // stop previous one if present and transfer client refcounter
-      return WebServer::CLIENT_IS_GIVEN;
-    }
-    return WebServer::CLIENT_REQUEST_CAN_CONTINUE;
-  });
-
-  // Hook examples
-  /////////////////////////////////////////////////////////
-
+  // handle index
+  server.on("/", []() {
+      // send index.html
+      server.send(200, "text/html", "<html><head><script>var connection = new WebSocket('ws://'+location.hostname+':81/', ['arduino']);connection.onopen = function () {  connection.send('Connect ' + new Date()); }; connection.onerror = function (error) {    console.log('WebSocket Error ', error);};connection.onmessage = function (e) {  console.log('Server: ', e.data);};function sendRGB() {  var r = parseInt(document.getElementById('r').value).toString(16);  var g = parseInt(document.getElementById('g').value).toString(16);  var b = parseInt(document.getElementById('b').value).toString(16);  if(r.length < 2) { r = '0' + r; }   if(g.length < 2) { g = '0' + g; }   if(b.length < 2) { b = '0' + b; }   var rgb = '#'+r+g+b;    console.log('RGB: ' + rgb); connection.send(rgb); }</script></head><body>LED Control:<br/><br/>R: <input id=\"r\" type=\"range\" min=\"0\" max=\"255\" step=\"1\" oninput=\"sendRGB();\" /><br/>G: <input id=\"g\" type=\"range\" min=\"0\" max=\"255\" step=\"1\" oninput=\"sendRGB();\" /><br/>B: <input id=\"b\" type=\"range\" min=\"0\" max=\"255\" step=\"1\" oninput=\"sendRGB();\" /><br/></body></html>");
+      });
   server.begin();
-  Serial.println("HTTP server started");
 }
 
 void loop() {
@@ -165,7 +120,11 @@ void loop() {
   //
   // this also processes tcp (http), i presume. cuz how else?
   // it somehow spawns another thread? that would be weird
+  //
+  // TODO: try removing this line
+  //  might only need this when we use loopback
   netif_poll_all();
 
+  webSocket.loop();
   server.handleClient();
 }
