@@ -1,6 +1,6 @@
 #include "phy.hpp"
 #include "ip.hpp"
-#include "tcp.hpp"
+#include "http_server.hpp"
 
 #include <lwip/netdb.h>
 
@@ -10,7 +10,7 @@ void setup() {
 
   initPhy();
 
-  tcpecho_raw_init(7);
+  http_server_init(80);
 
   int i = 0;
   struct netif *netif;
